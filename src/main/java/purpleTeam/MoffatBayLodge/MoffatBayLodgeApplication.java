@@ -2,6 +2,9 @@ package purpleTeam.MoffatBayLodge;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @SpringBootApplication
 public class MoffatBayLodgeApplication {
@@ -9,5 +12,4 @@ public class MoffatBayLodgeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MoffatBayLodgeApplication.class, args);
 	}
-
 }
