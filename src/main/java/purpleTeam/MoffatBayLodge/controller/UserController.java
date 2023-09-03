@@ -1,6 +1,7 @@
 package purpleTeam.MoffatBayLodge.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,8 +25,14 @@ public class UserController {
 	@Autowired
 	private final UserService userService;
 	
-    public UserController(UserService userService) {
+	@Autowired
+	private final PasswordEncoder passwordEncoder;
+	
+	
+	
+    public UserController(UserService userService, PasswordEncoder passwordEncoder) {
 		this.userService = userService;
+		this.passwordEncoder = passwordEncoder;
 	
 	}
 
@@ -39,8 +46,15 @@ public class UserController {
 
     @PostMapping("/register")
     public ModelAndView saveUserRegistrationForm(@ModelAttribute("user") User user) {
+		String encodedPassword = passwordEncoder.encode(user.getPassword());
+		String encodedConfirmPassword = passwordEncoder.encode(user.getConfirmPassword());
+
+		user.setPassword(encodedPassword);
+		user.setConfirmPassword(encodedConfirmPassword);
+
         userService.saveUser(user);
 		ModelAndView saveUserRegistrationView = new ModelAndView("login");
+
         return saveUserRegistrationView; 
     }
 }

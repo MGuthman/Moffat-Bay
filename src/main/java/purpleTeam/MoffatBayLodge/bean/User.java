@@ -33,6 +33,9 @@ public class User {
 
 	@Column(name = "password")
 	private String password;
+	
+	@Column(name = "confirm_password")
+	private String confirmPassword;
 
 	public int getUserID() {
 		return userID;
@@ -80,5 +83,13 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	public String getConfirmPassword() {
+		return confirmPassword;
+	}
+
+	public void setConfirmPassword(String confirmPassword) {
+		this.confirmPassword = confirmPassword;
 	}
 }

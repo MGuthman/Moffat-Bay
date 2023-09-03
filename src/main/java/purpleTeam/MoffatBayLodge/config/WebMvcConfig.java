@@ -19,4 +19,6 @@ public class WebMvcConfig {
         resolver.setSuffix(".jsp"); // The file extension of the JSP views
         return resolver;
     }
+
 }
+
