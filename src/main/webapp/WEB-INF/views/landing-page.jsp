@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
     <!-- ACTUAL CSS FILE LINK -->
-    <link rel="stylesheet" type="text/css" href="landing-page.css">
+    <link rel="stylesheet" type="text/css" href="css/landingPageStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.typekit.net/lot0wjb.css">
 
@@ -20,12 +20,11 @@
     <header>
         <!-- LOGO PATH -->
 
-        <img id=logo src="_images/MB_Title_Logo_3.png"></img>
+        <a href="home"><img id=logo src="_images/MB_Title_Logo_3.png"></img></a>
 
         <!-- USER ICON-->
         <!-- TODO: UPDATE WITH CORRECT PAGE NAME FOR LOGIN-->
-        <a href=""><i class="fa fa-user-circle-o"
-                style="float:right;font-size:56px;color:#554D41"></a></i></br></br></br>
+       <a href="login"><i class="fa fa-user-circle-o" style="float:right;font-size:56px;color:#554D41"></i></a></br></br></br>
 
     </header>
 
@@ -64,24 +63,24 @@
 
             <div class="nav-grid-item">
 
-                <a href="about-us.html" target="_self">ABOUT US</a>
+                <a href="about-us" target="_self">ABOUT US</a>
             </div>
 
             <div class="nav-grid-item">
 
-                <a href="attractions.html" target="_self">ATTRACTIONS</a>
-
-            </div>
-
-            <div class="nav-grid-item">
-
-                <a href="look-up-reservation.html" target="_self">FIND RESERVATION</a>
+                <a href="attractions" target="_self">ATTRACTIONS</a>
 
             </div>
 
             <div class="nav-grid-item">
 
-                <a href="reservation.html" target="_blank">MAKE RESERVATION</a>
+                <a href="look-up-reservation" target="_self">FIND RESERVATION</a>
+
+            </div>
+
+            <div class="nav-grid-item">
+
+                <a href="reservation" target="_blank">MAKE RESERVATION</a>
 
             </div>
 

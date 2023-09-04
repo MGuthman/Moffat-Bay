@@ -10,15 +10,16 @@
 </head>
 <body>
 	<header>
-
+		<a href="home"><img id = logo src="_images/MB_Title_Logo_3.png"></img></a>
 		<!-- USER ICON-->
-		<i class="fa fa-user-circle-o"
-			style="float: right; font-size: 56px; color: #554D41"></i>
+		<a href="login"><i class="fa fa-user-circle-o"
+			style="float: right; font-size: 56px; color: #554D41"></i></a>
 	</header>
+
 
 	<form action="/register" method="post" id="registrationForm">
 	
-		<h1>Register User</h1>
+		<h1>REGISTER USER</h1>
 		
 			<label for="firstName">First Name</label> 
 			<input type="text" id="firstName" name="firstName" required="required"><br>
@@ -44,10 +45,10 @@
 			var password = document.getElementById('password').value;
 			var passwordError = document.getElementById('passwordError');
 
-			var regex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{6,}$/;
+			var regex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$/;
 
 			if (!regex.test(password)) {
-				passwordError.textContent = 'Password must have at least 6 characters, 1 uppercase letter, 1 number, and 1 special character (!@#$%^&*).';
+				passwordError.textContent = 'Password must have at least 8 characters, 1 uppercase letter, 1 number, and 1 special character (!@#$%^&*).';
 			} else {
 				passwordError.textContent = '';
 			}
@@ -115,8 +116,22 @@
 
 	<div>
 		<footer>
-			<p class="copyright">Copyright &copy; 2023 Moffat Bay</p>
-		</footer>
+            <p>Moffat Bay Lodge </br>
+                1234 Moffat Bay AVE</br>
+                Joviedsa Island, WA 98550 </br>
+                1-800-555-1234
+            </p>
+
+            <div class="social-media">
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-snapchat"></a>
+            </div>
+
+            <p class="copyright">Copyright &copy; 2023 Moffat Bay</p>
+
+        </footer>
 	</div>
 	
 	</body>
