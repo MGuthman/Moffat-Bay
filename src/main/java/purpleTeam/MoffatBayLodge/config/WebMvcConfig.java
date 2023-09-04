@@ -1,3 +1,6 @@
+// Author: O.Tsolmon
+// Date: 09/03/2023
+
 package purpleTeam.MoffatBayLodge.config;
 
 import org.springframework.context.annotation.Bean;

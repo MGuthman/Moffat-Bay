@@ -1,3 +1,6 @@
+// Author: O.Tsolmon
+// Date: 09/03/2023
+
 package purpleTeam.MoffatBayLodge.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,3 +1,6 @@
+// Author: O.Tsolmon
+// Date: 09/03/2023
+
 package purpleTeam.MoffatBayLodge.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,4 +15,7 @@ import purpleTeam.MoffatBayLodge.bean.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
 
+    // Derived Query Method: https://www.baeldung.com/spring-data-derived-queries
+    // Built into framework to know to search for EmailAdress field/data
+    public User findByEmailAddress(String username);
 }
