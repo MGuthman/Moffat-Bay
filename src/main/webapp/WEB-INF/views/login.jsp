@@ -3,6 +3,7 @@ Date: 09/03/2023 -->
 
 <!DOCTYPE html>
 <html>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <head>
 	<title>Login Page</title>
@@ -19,12 +20,12 @@ Date: 09/03/2023 -->
 	</header>
 
 	<div class="wrapper">
-		<form action="/login" method="post" id="loginForm">
+		<form:form action="/login" method="post" id="loginForm">
 
 			<h1>LOGIN</h1>
 
-			<label for="userName">Username or Email Address</label>
-			<input type="text" id="userName" name="userName" required="required"><br>
+			<label for="username">Username or Email Address</label>
+			<input type="text" id="username" name="username" required="required"><br>
 			<label for="password">Password</label>
 			<input type="password" id="password" name="password" required="required"><br>
 			<button type="button" onclick="clearFields()">Cancel</button>
@@ -34,7 +35,7 @@ Date: 09/03/2023 -->
 			<br />
 			<br />
 			<a href="/register" method="get">Create New Account</a>
-		</form>
+		</form:form>
 		<div class="image">
 			<img id=login-image src="_images/MoffatBay_Lodge_Photo.jpg"></img>
 		</div>
@@ -43,7 +44,7 @@ Date: 09/03/2023 -->
 
 		//Clear all fields when the user clicks on Cancel button
 		function clearFields() {
-			document.getElementById('emailAddress').value = '';
+			document.getElementById('username').value = '';
 			document.getElementById('password').value = '';
 			document.getElementById('submitButton').disabled = true; // Disable Submit button after clearing fields
 		}
@@ -55,7 +56,7 @@ Date: 09/03/2023 -->
 				'input',
 				function () {
 					var userName = document
-						.getElementById('userName').value;
+						.getElementById('username').value;
 					var password = document.getElementById('password').value;
 					var submitButton = document
 						.getElementById('submitButton');
