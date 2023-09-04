@@ -1,4 +1,15 @@
+// Author: M.Guthman, O.Tsolmon
+// Date: 09/03/2023
+
 package purpleTeam.MoffatBayLodge.bean;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -13,7 +24,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "user_registration")
-public class User {
+public class User implements UserDetails {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "user_id")
@@ -38,11 +49,11 @@ public class User {
 	private String confirmPassword;
 
 	public int getUserID() {
-		return userID;
+		return this.userID;
 	}
 
 	public String getEmailAddress() {
-		return emailAddress;
+		return this.emailAddress;
 	}
 
 	public void setEmailAddress(String emailAddress) {
@@ -50,7 +61,7 @@ public class User {
 	}
 
 	public String getFirstName() {
-		return firstName;
+		return this.firstName;
 	}
 
 	public void setFirstName(String firstName) {
@@ -58,7 +69,7 @@ public class User {
 	}
 
 	public String getLastName() {
-		return lastName;
+		return this.lastName;
 	}
 
 	public void setLastName(String lastName) {
@@ -66,7 +77,7 @@ public class User {
 	}
 
 	public String getPhoneNumber() {
-		return phoneNumber;
+		return this.phoneNumber;
 	}
 
 	public void setPhoneNumber(String phoneNumber) {
@@ -74,7 +85,7 @@ public class User {
 	}
 
 	public String getPassword() {
-		return password;
+		return this.password;
 	}
 
 	public void setPassword(String password) {
@@ -82,10 +93,40 @@ public class User {
 	}
 	
 	public String getConfirmPassword() {
-		return confirmPassword;
+		return this.confirmPassword;
 	}
 
 	public void setConfirmPassword(String confirmPassword) {
 		this.confirmPassword = confirmPassword;
+	}
+
+	// When fecthing username, returning emailAdress as we are using emailAdress as username (per assignment instructions)
+	public String getUsername(){
+		return this.emailAddress;
+	}
+
+	public boolean isEnabled(){
+		return true;
+	}
+
+	public boolean isCredentialsNonExpired(){
+		return true;
+	}
+
+	// Adding "roles" to users
+	public Collection<? extends GrantedAuthority> getAuthorities(){
+		List <GrantedAuthority> permissions = new ArrayList<GrantedAuthority>();
+		if (this.isEnabled()){
+			permissions.add(new SimpleGrantedAuthority("USER"));
+		}
+		return permissions;
+	}
+
+	public boolean isAccountNonExpired(){
+		return true;
+	}
+
+	public boolean isAccountNonLocked(){
+		return true;
 	}
 }
