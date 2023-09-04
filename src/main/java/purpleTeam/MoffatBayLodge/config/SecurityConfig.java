@@ -36,8 +36,9 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.authorizeHttpRequests(auth -> auth.dispatcherTypeMatchers(DispatcherType.FORWARD).permitAll()
-				// .requestMatchers(new AntPathRequestMatcher("/register*")).authenticated()
-				.anyRequest().permitAll()).formLogin(login -> login.loginPage("/login").loginProcessingUrl("/perform_login"));
+						// .requestMatchers(new AntPathRequestMatcher("/register*")).authenticated()
+						.anyRequest().permitAll())
+				.formLogin(login -> login.loginPage("/login").defaultSuccessUrl("/home"));
 		return http.build();
 	}
 

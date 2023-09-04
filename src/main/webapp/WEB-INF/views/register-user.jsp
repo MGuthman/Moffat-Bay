@@ -3,6 +3,7 @@ Date: 09/03/2023 -->
 
 <!DOCTYPE html>
 <html>
+	<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <head>
 <title>Register User</title>
 <link rel="stylesheet" type="text/css"
@@ -20,7 +21,7 @@ Date: 09/03/2023 -->
 	</header>
 
 
-	<form action="/register" method="post" id="registrationForm">
+	<form:form action="/register" method="post" id="registrationForm">
 	
 		<h1>REGISTER USER</h1>
 		
@@ -40,7 +41,7 @@ Date: 09/03/2023 -->
             <span id="confirmPasswordError" style="color: red;"></span><br> <!-- Error message for confirm password -->
 			<button type="button" onclick="clearFields()" >Cancel</button>
 			<button type="submit" id="submitButton" class="disabled-button">Submit</button>
-	</form>
+	</form:form>
 
 	<script>
 		// Check if passwords requirements are met
