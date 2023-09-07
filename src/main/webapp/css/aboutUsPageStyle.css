@@ -1,0 +1,179 @@
+/* Purple Team: D. Bonis, R. Duvall, M. Guthman, O.Tsolmon */
+
+/* Author: M.Guthman
+Date: 09/05/2023 */
+
+html {
+    background-color: #ADCCCD;
+    align-content: center;
+    font-family: 'Quasimoda';
+}
+
+html * {
+    color: #554D41;
+}
+
+
+body,
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-color: #ADCCCD;
+    top: 0;
+    padding: 10px;
+    height: 125px;
+}
+
+#logo {
+    padding: 20px;
+    float: left;
+    height: 75px;
+    width: 125px;
+
+}
+
+h1 {
+    color: #554D41;
+    margin-top: 10;
+    text-align: left;
+    font-family: 'Quasimoda';
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    grid-auto-rows: minmax(100px, auto);
+    align-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 150px;
+}
+
+.card { 
+    max-width: 500px;
+    max-height: auto;
+
+}
+
+.card-image img {
+    max-width: 500px;
+    max-height: auto;
+	position: absolute;
+}
+
+.card-image figcaption {
+	top: 0;
+	left: 0;
+    color: #554D41;
+    text-align: right;
+    font-family: 'Quasimoda';
+    font-size: 2.0em;
+    display: block;
+}
+
+.card-content {
+	margin-top: 75px;
+    padding: 50px;
+    margin-bottom: 250px;
+    text-align: left;
+    font-family: 'Quasimoda';
+    line-height: 25px;
+    font-size: 1.25em;
+}
+
+#history {
+    margin-top: -25px;
+}
+.about-header img {
+    width: 1650px;
+    margin-top: 10;
+    align-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.card-image img:hover{
+	transition: 1.5s;
+}
+
+
+.social-media {
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.social-media a {
+    padding: 20px;
+}
+
+
+footer {
+    background-color: #E7DFD8;
+    bottom: 0;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+footer p {
+    font-family: 'Quasimoda';
+    font-size: 15px;
+    font-weight: 400;
+    float: left;
+    display: flex;
+    padding: 10px;
+    font-style: italic;
+}
+
+.copyright {
+    display: flex;
+    margin-right: 10px;
+    margin-top: 35px;
+}
+
+figcaption {
+    font-style: italic;
+    padding: 5px;
+    text-align: center;
+}
+
+.navbar {
+    font-size: 30px;
+    overflow: hidden;
+    background-color: #ADCCCD;
+    position: sticky;
+    padding-bottom: 5px;
+    padding-top: 35px;
+    padding-right: 35px;
+
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: .75em
+}
+
+
+.nav-grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    padding: 20px;
+}
+
+.nav-grid-item {
+    display: grid;
+    padding: 5px;
+}
+

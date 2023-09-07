@@ -1,3 +1,4 @@
+// Purple Team: D. Bonis, R. Duvall, M. Guthman, O.Tsolmon
 package purpleTeam.MoffatBayLodge;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;

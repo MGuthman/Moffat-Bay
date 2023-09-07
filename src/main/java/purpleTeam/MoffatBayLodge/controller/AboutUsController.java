@@ -1,3 +1,4 @@
+// Purple Team: D. Bonis, R. Duvall, M. Guthman, O.Tsolmon
 // Author: M.Guthman
 // Date: 09/03/2023
 
@@ -30,7 +31,7 @@ public class AboutUsController {
 	}
 
     @GetMapping("/about-us")
-    public String homePage(Model model) {
+    public String aboutUs(Model model) {
         return "about-us";
     }
 }

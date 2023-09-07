@@ -1,3 +1,4 @@
+/* Purple Team: D. Bonis, R. Duvall, M. Guthman, O.Tsolmon */
 /* Creator: Dylan 8/26/23 */
 
 /* Connect to Database*/
