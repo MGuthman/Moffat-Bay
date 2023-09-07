@@ -1,5 +1,6 @@
 package purpleTeam.MoffatBayLodge.controller;
 
+import org.apache.commons.lang3.ObjectUtils.Null;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,7 +26,8 @@ public class ReservationFormController {
     @GetMapping("/reservation")
     public ModelAndView showRegistrationForm(Model model, @ModelAttribute("user") User user) {
 
-        if(user.getEmailAddress() == ""){
+        //Set with condition to send to login page first
+        if(false){
             ModelAndView loginFormView = new ModelAndView("login");
             return loginFormView;
         }
