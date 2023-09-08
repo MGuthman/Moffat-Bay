@@ -4,6 +4,7 @@
     09/05/23
 
     Reservation Requesting Page
+    Update - 09/7/23 -- Added comments, added toHome, added roomPrice with logic
 -->
 <html lang="en">
 
@@ -20,10 +21,9 @@
 	</header>
 
 
-    <form:form action="/reservation" method="post" id="reservationForm">
-	
-        <!-- Form that lets you fill out roomSize, numberOfGuests, checkInDate, and checkOut Date
+     <!-- Form that lets you fill out roomSize, numberOfGuests, checkInDate, and checkOut Date
              ReservationId Is Generated, UserId is used from login, and total price is determined by number of guests and days-->
+    <form:form action="/reservation" method="post" id="reservationForm">
     <div class="fullForm">
 		<h1>Reservation Form</h1>
 		
@@ -46,10 +46,7 @@
                         <option value=3>3</option>
                         <option value=4>4</option>
                         <option value=5>5</option>
-                        <option value=6>6</option>
-                        <option value=7>7</option>
-                        <option value=8>8</option>
-                        <option value=9>9</option>
+                        <!-- The Max Number of Guests allowed to stay in one room is 5 as per the project requirements-->
                     </select>
                 </div>
             </div>
@@ -59,30 +56,35 @@
             <div id="roomSelection">
                 <div class="roomSize">
                     <label for="doubleFull">
-                        <input type="radio" id="doubleFull" name="roomSize" required="required"></input>Two Full Sized Beds
+                        <input type="radio" id="doubleFull" name="roomSize" value="Double Full" required></input>Two Full Sized Beds
                     </label>
                 </div>
                 
                 <div class="roomSize">
                     <label for="queen">
-                        <input type="radio" id="queen" name="roomSize" required="required"></input>Queen Sized Bed
+                        <input type="radio" id="queen" name="roomSize" value="Queen"></input>Queen Sized Bed
                     </label>
                 </div>
                 
                 <div class="roomSize">
                     <label for="doubleQueen">
-                        <input type="radio" id="doubleQueen" name="roomSize" required="required">Two Queen Sized Beds</input>
+                        <input type="radio" id="doubleQueen" name="roomSize" value="Double Queen">Two Queen Sized Beds</input>
                     </label>
                 </div>
                 
                 <div class="roomSize">
                     <label for="king">
-                        <input type="radio" id="king" name="roomSize" required="required">King Sized Bed</input>
+                        <input type="radio" id="king" name="roomSize" value="King">King Sized Bed</input>
                     </label>
                 </div>
             </div>
-            <button type="button" onclick="clearFields()">Cancel</button>
+            <button type="button" onclick="clearFields()">Clear</button>
 			<button type="submit" id="submitButton" class="disabled-button">Reserve</button>
+            <br><br>
+            <div class="roomPrice">
+                <h2>Price for room:</h2>
+                <p>$<span id="totalPrice" name="totalPrice">0.00</span></p>
+            </div>
             
         </div>
 	</form:form>
@@ -125,6 +127,8 @@
         </div>
     </div>
 
+    <p><a href="home" id="toHome">To Home</a></p>
+
     <!-- Consistent Footer -->
     <div>
 		<footer>
@@ -146,6 +150,7 @@
 		</footer>
 	</div>
 
+    <!-- Javascript -->
     <script>
         //Clear all fields when the user clicks on Cancel button
 		function clearFields() {
@@ -168,8 +173,8 @@
 					var checkInDate = document.getElementById('checkInDate').value;
                     var checkOutDate = document.getElementById('checkOutDate').value;
 					var numberOfGuests = document.getElementById('numberOfGuests').value;
-                    
                     var roomSize = document.getElementById('doubleFull').checked || document.getElementById('queen').checked || document.getElementById('doubleQueen').checked || document.getElementById('king').checked;
+                    getTotalPrice();
 
 					if (checkInDate && checkOutDate && numberOfGuests && roomSize) {
 						submitButton.disabled = false;
@@ -182,6 +187,65 @@
 						submitButton.classList.add('disabled-button');
 					}
 				});
+
+        function daysBetween(){
+            //Try to get the values of checkin and checkout, on fail return 0
+            var checkInDate = document.getElementById('checkInDate').value;
+            var checkOutDate = document.getElementById('checkOutDate').value;
+
+
+            //Time of one day in 'time'
+            const oneDay = 1000 * 60 * 60 * 24;
+            //Parse the string values of checkIn and checkOut
+            var day1 = new Date(Date.parse(checkInDate));
+            var day2 = new Date(Date.parse(checkOutDate));
+            
+            //gets the number of days difference between day 1 and day 2
+            var difference = (day2.getTime() - day1.getTime()) / oneDay;
+            
+            //Prevents it from sending a null item
+            if(isNaN(difference)){
+                 return 0;
+            }
+            else{
+                return difference;
+            }
+                 
+
+        }
+
+        //Get the total price for the room 
+        function getTotalPrice(){
+            var twoOrLessRate = 120.75; //Room rate * 5% increase per email
+            var threeOrMoreRate = 157.50;
+            var totalPrice;
+
+            try {
+                var days = daysBetween();
+                var numberOfGuests = document.getElementById('numberOfGuests').value;
+                
+            } catch (error) {
+                document.getElementById('totalPrice').innerText = 0.00;
+                return;
+            }
+
+
+            if(numberOfGuests >= 3){
+                totalPrice = (threeOrMoreRate * days).toFixed(2);
+                document.getElementById('totalPrice').innerText = totalPrice;
+            }
+            else{
+                totalPrice = (twoOrLessRate * days) .toFixed(2);
+                document.getElementById('totalPrice').innerText = totalPrice;
+            }
+        }
+
+        //Sets the minimum dates for checkInDate and CheckOutDate to today and tomorrow respectively
+        day1 = new Date();
+        day2 = new Date();
+        day2.setDate(day1.getDate()+1);
+        checkInDate.min = day1.toLocaleDateString('en-ca');
+        checkOutDate.min = day2.toLocaleDateString('en-ca');
     </script>
 </body>
 

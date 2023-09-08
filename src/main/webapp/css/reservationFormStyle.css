@@ -1,4 +1,9 @@
+/* 
+    Dylan Bonis
+    9/6/23
 
+    Reservation Form Page Styling
+*/
 h1{
     margin-left: 3%;
 }
@@ -92,4 +97,11 @@ input[type="date"], select{
     align-items: right;
     font-size: x-large;
     width: 100%;
+}
+
+
+.roomPrice{
+    float: left;
+    display: flex;
+    width: 50%;
 }

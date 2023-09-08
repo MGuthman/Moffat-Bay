@@ -1,5 +1,6 @@
 // Author: D.Bonis
 // Date: 09/05/2023
+// Update 9/7/23 Changed names to snake case per Oyun comment
 package purpleTeam.MoffatBayLodge.bean;
 
 import java.math.BigDecimal;
@@ -17,31 +18,35 @@ public class Reservation {
     
     @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "reservationID")
+	@Column(name = "reservation_id")
 	private String reservationID;
 
-    @Column(name = "userID")
+    @Column(name = "user_is")
 	private int userID;
 
-    @Column(name = "roomSize")
+    @Column(name = "room_size")
 	private String roomSize;
 
-    @Column(name = "numberOfGuests")
+    @Column(name = "number_of_guests")
 	private int numberOfGuests;
 
-    @Column(name = "checkInDate")
+    @Column(name = "check_in_date")
 	private String checkInDate;
 
-    @Column(name = "checkOutDate")
+    @Column(name = "check_out_date")
 	private String checkOutDate;
 
-    @Column(name = "totalPrice", precision=5, scale = 2)
+    @Column(name = "total_price", precision=5, scale = 2)
 	private BigDecimal totalPrice;
 
     
-    //Getter and Setter methods for each variable except being able to set roomId
+    //Getter and Setter methods for each variable
     public String getReservationId(){
         return reservationID;
+    }
+
+    public void setReservationId(String reservationID){
+        this.reservationID = reservationID;
     }
 
     public int getUserID(){
