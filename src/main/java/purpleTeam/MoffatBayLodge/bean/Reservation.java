@@ -1,14 +1,13 @@
 // Author: D.Bonis
 // Date: 09/05/2023
 // Update 9/7/23 Changed names to snake case per Oyun comment
+// Update 9/8/23 Removed Generated Value and it now works with database
 package purpleTeam.MoffatBayLodge.bean;
 
 import java.math.BigDecimal;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -17,26 +16,25 @@ import jakarta.persistence.Table;
 public class Reservation {
     
     @Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "reservation_id")
+	@Column(name = "reservationID")
 	private String reservationID;
 
-    @Column(name = "user_is")
+    @Column(name = "user_id")
 	private int userID;
 
-    @Column(name = "room_size")
+    @Column(name = "roomsize")
 	private String roomSize;
 
-    @Column(name = "number_of_guests")
+    @Column(name = "numberofguests")
 	private int numberOfGuests;
 
-    @Column(name = "check_in_date")
+    @Column(name = "checkindate")
 	private String checkInDate;
 
-    @Column(name = "check_out_date")
+    @Column(name = "checkoutdate")
 	private String checkOutDate;
 
-    @Column(name = "total_price", precision=5, scale = 2)
+    @Column(name = "totalprice", precision=5, scale = 2)
 	private BigDecimal totalPrice;
 
     

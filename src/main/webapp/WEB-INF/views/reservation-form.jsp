@@ -5,12 +5,13 @@
 
     Reservation Requesting Page
     Update - 09/7/23 -- Added comments, added toHome, added roomPrice with logic
+    Update - 09/8/23 -- Made it clear previous fill in on page load, added springboot
+                        specific form tag, added total value in hidden attribute, now saves to database no problem
 -->
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html lang="en">
-
 <head>
     <title>Reservation Form</title>
-    <link rel="stylesheet" type="text/css" href="css/loginPageStyle.css">
     <link rel="stylesheet" type="text/css" href="css/reservationFormStyle.css">
 </head>
 <body>
@@ -23,24 +24,24 @@
 
      <!-- Form that lets you fill out roomSize, numberOfGuests, checkInDate, and checkOut Date
              ReservationId Is Generated, UserId is used from login, and total price is determined by number of guests and days-->
-    <form:form action="/reservation" method="post" id="reservationForm">
+    <form:form action="/reservation" method="POST" id="reservationForm">
     <div class="fullForm">
 		<h1>Reservation Form</h1>
 		
             <div class="formTop">
                 <div class="picker">
                     <h2>Check In Date:</h2> <br>
-                    <input type="date" id="checkInDate" name="checkInDate"></input>
+                    <input type="date" id="checkInDate" name="checkInDate" required></input>
                 </div>
                 
                 <div class="picker">
                     <h2>Check Out Date:</h2> <br>
-                    <input type="date" id="checkOutDate" name="checkOutDate"></input>
+                    <input type="date" id="checkOutDate" name="checkOutDate" required></input>
                 </div>
                 
                 <div class="picker">
                     <h2>Number Of Guests:</h2> <br>
-                    <select id="numberOfGuests" name="numberOfGuests">
+                    <select id="numberOfGuests" name="numberOfGuests required">
                         <option value=1>1</option>
                         <option value=2>2</option>
                         <option value=3>3</option>
@@ -83,7 +84,8 @@
             <br><br>
             <div class="roomPrice">
                 <h2>Price for room:</h2>
-                <p>$<span id="totalPrice" name="totalPrice">0.00</span></p>
+                <p>$<span id="total" name="total">0.00</span></p>
+                <input type="hidden" id="totalPrice" name="totalPrice" value=0></input>
             </div>
             
         </div>
@@ -164,6 +166,8 @@
                     ele[i].checked = false;
 
 			document.getElementById('submitButton').disabled = true;// Disable Submit button after clearing fields
+            submitButton.classList.remove('enabled-button');
+            submitButton.classList.add('disabled-button');
 		}
 
 		// Check if all required fields are filled to enable the Submit button
@@ -175,6 +179,7 @@
 					var numberOfGuests = document.getElementById('numberOfGuests').value;
                     var roomSize = document.getElementById('doubleFull').checked || document.getElementById('queen').checked || document.getElementById('doubleQueen').checked || document.getElementById('king').checked;
                     getTotalPrice();
+
 
 					if (checkInDate && checkOutDate && numberOfGuests && roomSize) {
 						submitButton.disabled = false;
@@ -225,18 +230,21 @@
                 var numberOfGuests = document.getElementById('numberOfGuests').value;
                 
             } catch (error) {
-                document.getElementById('totalPrice').innerText = 0.00;
+                document.getElementById('total').innerText = 0.00;
+                document.getElementById("totalPrice").value = 0;
                 return;
             }
 
 
             if(numberOfGuests >= 3){
                 totalPrice = (threeOrMoreRate * days).toFixed(2);
-                document.getElementById('totalPrice').innerText = totalPrice;
+                document.getElementById('total').innerText = totalPrice;
+                document.getElementById('totalPrice').value = totalPrice;
             }
             else{
                 totalPrice = (twoOrLessRate * days) .toFixed(2);
-                document.getElementById('totalPrice').innerText = totalPrice;
+                document.getElementById('total').innerText = totalPrice;
+                document.getElementById('totalPrice').value = totalPrice;
             }
         }
 
@@ -246,6 +254,9 @@
         day2.setDate(day1.getDate()+1);
         checkInDate.min = day1.toLocaleDateString('en-ca');
         checkOutDate.min = day2.toLocaleDateString('en-ca');
+
+        //Clear all fields on load
+        clearFields();
     </script>
 </body>
 

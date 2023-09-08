@@ -30,6 +30,7 @@ public class ReservationFormController {
     @Autowired
 	private final ReservationService reservationService;
 
+    @Autowired
     UserService userService; 
 
     @Autowired
@@ -39,7 +40,7 @@ public class ReservationFormController {
 		this.reservationService = reservationService;
 	}
 
-    //Maps the post request to the login page if session doesn't have an email attached, otheriwse it goes to reservation page
+    //Maps the get request to the login page if session doesn't have an email attached, otheriwse it goes to reservation page
     @GetMapping("/reservation")
     public ModelAndView showRegistrationForm(Model model, @ModelAttribute("user") User user) {
         
@@ -60,6 +61,8 @@ public class ReservationFormController {
         reservation.setReservationId(randomTenChar());
         User user = userService.getUser(getSessionEmail());
         reservation.setUserID(user.getUserID());
+
+        
 
         reservationService.saveReservation(reservation);
 		ModelAndView saveUserRegistrationView = new ModelAndView("summary");
