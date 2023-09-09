@@ -41,7 +41,7 @@
                 
                 <div class="picker">
                     <h2>Number Of Guests:</h2> <br>
-                    <select id="numberOfGuests" name="numberOfGuests required">
+                    <select id="numberOfGuests" name="numberOfGuests" required">
                         <option value=1>1</option>
                         <option value=2>2</option>
                         <option value=3>3</option>
