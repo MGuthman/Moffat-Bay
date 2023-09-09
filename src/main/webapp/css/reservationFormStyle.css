@@ -1,0 +1,226 @@
+/* 
+    Dylan Bonis
+    9/6/23
+
+    Reservation Form Page Styling
+*/
+
+html {
+	background-color: #ADCCCD;
+	align-content: center;
+	font-family: 'Quasimoda';
+}
+
+html * {
+	color: #554D41;
+}
+
+body {
+	background-color: #ADCCCD;
+	align-content: center;
+}
+
+body, html {
+	margin: 0px;
+	padding: 0px;
+  }
+
+  header {
+	background-color: #ADCCCD;
+	position: sticky;
+	top: 0;
+	padding: 10px;
+	height: 110px;
+    width: 100%;
+}
+
+#logo {
+	padding: 20px;
+	float: left;
+	height: 75px;
+	width: 125px;
+
+}
+
+h1 {
+	color: #554D41;
+	margin-top: 10;
+	text-align: left;
+	font-family: 'Quasimoda';
+    margin-left: 3%;
+}
+
+.roomSize{
+	background-color: #E7DFD8;
+	padding: 0 50px;
+	border-radius: 15px;
+	box-shadow: 0px 0px 10px rgb(85, 77, 65, .40);
+	width: 80%;
+	margin: 1% auto;
+	float: left;
+    font-size: x-large;
+}
+
+
+#roomSelection{
+    width:100%;
+    display:table;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+
+
+.fullForm{
+    background-color: #E7DFD8;
+    border-radius: 15px;
+    margin-left: 3%;
+    height: 100%;
+    width: 47%;
+    float:left;
+}
+
+button[type="submit"]{
+    height: 100%;
+    float:left;
+}
+
+
+h2{
+    margin: 10px;
+    display: inline;
+    width: 30%;
+}
+
+.picker{
+    padding: 20px;
+    vertical-align: middle;
+    text-align: center;
+    width: 32%;
+    margin: 0 auto;
+}
+
+.formTop{
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+}
+
+input[type="date"], select{
+    padding: 2px 5px;
+    max-width: 100px;
+    max-height: 60px;
+    font-size: medium;
+}
+
+
+.roomDesc{
+    margin-right: 5%;
+    width: 45%;
+    float: left;
+    height: 50%;
+}
+
+.likeFigure{
+    margin: 2px;
+    background-color: #E7DFD8;
+    border-radius: 15px;
+    width:100%;
+    padding: 2%;
+    text-align: left;
+    display: flex;
+}
+
+.likeFigure img{
+    width: 20%;
+}
+
+.likeFigure li{
+    margin-left: 5%;
+    align-items: right;
+    font-size: x-large;
+    width: 100%;
+}
+
+
+.roomPrice{
+    float: left;
+    display: flex;
+    width: 50%;
+}
+
+label {
+	display: block;
+	margin-top: 10px;
+	color: #554D41;
+}
+
+input[type="text"],
+input[type="password"] {
+	width: 90%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+
+.enabled-button {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 3px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+.disabled-button {
+	background-color: gray;
+	color: #fff;
+
+}
+
+.enabled-button:hover {
+	background-color: #0056b3;
+}
+
+.social-media {
+	align-items: center;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+
+.social-media a {
+	padding: 20px;
+}
+
+footer {
+	background-color: #E7DFD8;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+    height:fit-content;
+	width: 100%;
+	overflow: hidden;
+}
+
+footer p {
+	font-family: 'Quasimoda';
+	font-size: 15px;
+	font-weight: 400;
+	float: left;
+	display: flex;
+	padding: 10px;
+	font-style: italic;
+}
+
+.copyright {
+	display: flex;
+	margin-right: 10px;
+	margin-top: 35px;
+}
