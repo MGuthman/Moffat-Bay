@@ -1,7 +1,10 @@
 <!-- Purple Team: D. Bonis, R. Duvall, M. Guthman, O.Tsolmon -->
 
 <!-- Author: M.Guthman
-Date: 09/03/2023 -->
+Date: 09/03/2023 
+Updated By: O.Tsolmon - 09/09/23 --Added target attribute in a tag (reservation) to make sure it doesn't open new tab. 
+    Navigation happens on the same tab.
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -85,7 +88,7 @@ Date: 09/03/2023 -->
 
             <div class="nav-grid-item">
 
-                <a href="reservation" target="_blank">MAKE RESERVATION</a>
+                <a href="reservation" target="_self">MAKE RESERVATION</a>
 
             </div>
 

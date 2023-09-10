@@ -1,7 +1,12 @@
 <!-- Purple Team: D. Bonis, R. Duvall, M. Guthman, O.Tsolmon -->
 
-<!-- Author: O.Tsolmon
-Date: 09/03/2023 -->
+<!-- 
+Author: O.Tsolmon
+Date: 09/03/2023 
+
+Updated: 09/09/23 -- Added target attribute in form tag
+-->
+
 
 <!DOCTYPE html>
 <html>
@@ -23,7 +28,7 @@ Date: 09/03/2023 -->
 	</header>
 
 
-	<form:form action="/register" method="post" id="registrationForm">
+	<form:form action="/register" method="post" id="registrationForm" starget="_self">
 	
 		<h1>REGISTER USER</h1>
 		
