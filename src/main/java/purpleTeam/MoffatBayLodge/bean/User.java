@@ -45,7 +45,7 @@ public class User implements UserDetails {
 
 	@Column(name = "password")
 	private String password;
-	
+
 	@Column(name = "confirm_password")
 	private String confirmPassword;
 
@@ -92,7 +92,7 @@ public class User implements UserDetails {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	public String getConfirmPassword() {
 		return this.confirmPassword;
 	}
@@ -101,33 +101,34 @@ public class User implements UserDetails {
 		this.confirmPassword = confirmPassword;
 	}
 
-	// When fecthing username, returning emailAdress as we are using emailAdress as username (per assignment instructions)
-	public String getUsername(){
+	// When fecthing username, returning emailAdress as we are using emailAdress as
+	// username (per assignment instructions)
+	public String getUsername() {
 		return this.emailAddress;
 	}
 
-	public boolean isEnabled(){
+	public boolean isEnabled() {
 		return true;
 	}
 
-	public boolean isCredentialsNonExpired(){
+	public boolean isCredentialsNonExpired() {
 		return true;
 	}
 
 	// Adding "roles" to users
-	public Collection<? extends GrantedAuthority> getAuthorities(){
-		List <GrantedAuthority> permissions = new ArrayList<GrantedAuthority>();
-		if (this.isEnabled()){
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		List<GrantedAuthority> permissions = new ArrayList<GrantedAuthority>();
+		if (this.isEnabled()) {
 			permissions.add(new SimpleGrantedAuthority("USER"));
 		}
 		return permissions;
 	}
 
-	public boolean isAccountNonExpired(){
+	public boolean isAccountNonExpired() {
 		return true;
 	}
 
-	public boolean isAccountNonLocked(){
+	public boolean isAccountNonLocked() {
 		return true;
 	}
 }

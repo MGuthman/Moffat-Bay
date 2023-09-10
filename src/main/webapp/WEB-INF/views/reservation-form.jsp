@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<!--
-    D.Bonis
-    09/05/23
+<!--Purple Team: D. Bonis, R. Duvall, M. Guthman, O.Tsolmon 
+    Author: D.Bonis
+            09/05/23
 
     Reservation Requesting Page
     Update - 09/7/23 -- Added comments, added toHome, added roomPrice with logic
     Update - 09/8/23 -- Made it clear previous fill in on page load, added springboot
                         specific form tag, added total value in hidden attribute, now saves to database no problem
+    Updated By: O.Tsolmon - 09/09/23 --Added target attribute in form tag to make sure it doesn't open new tab. 
+    Navigation happens on the same tab.
 -->
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html lang="en">
@@ -24,7 +26,8 @@
 
      <!-- Form that lets you fill out roomSize, numberOfGuests, checkInDate, and checkOut Date
              ReservationId Is Generated, UserId is used from login, and total price is determined by number of guests and days-->
-    <form:form action="/reservation" method="POST" id="reservationForm">
+    <form:form action="/reservation-summary" method="POST" id="reservationForm" target="_self">
+
     <div class="fullForm">
 		<h1>Reservation Form</h1>
 		

@@ -1,5 +1,7 @@
+// Purple Team: D. Bonis, R. Duvall, M. Guthman, O.Tsolmon
 // Author: D.Bonis
 // Date: 09/05/2023
+// Updated By: O.Tsolmon 09/09/23 -- Added getLatestReservationByUserID and deleteReservation methods
 
 package purpleTeam.MoffatBayLodge.service;
 
@@ -24,5 +26,15 @@ public class ReservationService {
 
 	public Reservation saveReservation(Reservation reservation) {
 		return reservationRepository.save(reservation);
+	}
+
+	// Gets the latest reservation entry in the db by user id in desc order.
+	public Reservation getLatestReservationByUserID(int userID) {
+		return reservationRepository.findTop1ByUserIDOrderByReservationIDDesc(userID);
+	}
+
+	// Deletes the reservation object from the db.
+	public void deleteReservation(Reservation reservation) {
+		reservationRepository.delete(reservation);
 	}
 }
