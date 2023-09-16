@@ -65,14 +65,15 @@ Date: 09/13/2023 -->
 
 					<label for="confirmation">Confirmation Code</label>
 					<input type="text" id="confirmation" name="confirmation" required="required"><br>
+					<p id="lookupError">${lookupError}</p>
 					<button type="button" onclick="clearFields()">Cancel</button>
 					<button type="submit" id="submitButton" class="disabled-button">Lookup</button>
 					<br />
 					<br />
 					<br />
 					<br />
-					<p>Need to make a reservation? <a href="/reservation" method="get">Make Reservation Here</a></p>
 				</form:form>
+				<p id="makeReservation">Need to make a reservation? <a href="/reservation" method="get">Make Reservation Here</a></p>
 			</div>
 		</div>
 

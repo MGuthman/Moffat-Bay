@@ -80,7 +80,7 @@ h1 {
 
 }
 
-.lookup-form p { 
+#makeReservation { 
     font-size: .75em;
     float: right;
 }
@@ -93,6 +93,13 @@ h1 {
     margin-bottom: 200px;
     background-color: #E7DFD8;
     box-shadow: 10px 10px rgb(85,77,65, .40);
+
+}
+
+#lookupError { 
+    font-size: 1.0em;
+    color: red;
+    text-align: center;
 
 }
 

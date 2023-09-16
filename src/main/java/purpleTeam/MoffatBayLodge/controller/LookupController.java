@@ -8,15 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import purpleTeam.MoffatBayLodge.bean.Reservation;
-import purpleTeam.MoffatBayLodge.bean.User;
 import purpleTeam.MoffatBayLodge.service.ReservationService;
-import purpleTeam.MoffatBayLodge.service.UserService;
 
 //User controller that handles all the incoming request, process, the user input, displays, and returns the correct view or jsp file.
 //This user controller encapsulates the business logic by interpreting the client request and execute the necessary actions.
@@ -39,16 +36,21 @@ public class LookupController {
     }
 
     @PostMapping("/lookup")
-	public ModelAndView lookupReservation(@RequestParam(value = "confirmation")String confirmation) {
+    public ModelAndView lookupReservation(@RequestParam(value = "confirmation") String confirmation) {
 
         Reservation reservation = reservationService.lookupConfirmationById(confirmation);
 
-		ModelAndView lookupReservation = new ModelAndView("reservation-lookup");
+        if (reservation == null) {
+            ModelAndView lookupError = new ModelAndView("reservation-lookup");
+            lookupError.addObject("lookupError", "INVALID CONFIRMATION CODE");
 
-		lookupReservation.addObject("reservation", reservation);
+            return lookupError;
+        }
 
-        System.out.println(reservation.getUserID());
+        ModelAndView lookupReservation = new ModelAndView("reservation-lookup");
 
-		return lookupReservation;
-	}
+        lookupReservation.addObject("reservation", reservation);
+        return lookupReservation;
+    }
+
 }

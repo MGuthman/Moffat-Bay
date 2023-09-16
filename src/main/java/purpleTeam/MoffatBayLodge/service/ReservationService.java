@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import purpleTeam.MoffatBayLodge.bean.Reservation;
-import purpleTeam.MoffatBayLodge.bean.User;
 import purpleTeam.MoffatBayLodge.repository.ReservationRepository;
 
 //The UseService helps as the middle man between the web controller and the data access layer.
