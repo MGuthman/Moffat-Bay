@@ -26,7 +26,6 @@ html {
 
 header {
 	background-color: #ADCCCD;
-	position: sticky;
 	top: 0;
 	padding: 10px;
 	height: 110px;
@@ -59,6 +58,7 @@ h1 {
 	padding: 100px;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 	margin: 70px;
+	margin-bottom: 100px;
 }
 
 .confirmation-container {
@@ -140,6 +140,7 @@ button[type="submit"] {
 	float: left;
 	padding: 15px 30px;
 	font-size: large;
+	margin-right: 50px;
 }
 
 .social-media {

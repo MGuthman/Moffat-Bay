@@ -25,4 +25,8 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
 	// in the method name have to match the same naming convention as they were
 	// declared in the bean.
 	Reservation findTop1ByUserIDOrderByReservationIDDesc(int userID);
+
+	public Reservation findByConfirmationID(String confirmationID);
 }
+
+

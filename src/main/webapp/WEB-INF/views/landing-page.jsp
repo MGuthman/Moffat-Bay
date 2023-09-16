@@ -82,7 +82,7 @@ Updated By: O.Tsolmon - 09/09/23 --Added target attribute in a tag (reservation)
 
             <div class="nav-grid-item">
 
-                <a href="look-up-reservation" target="_self">FIND RESERVATION</a>
+                <a href="lookup" target="_self">FIND RESERVATION</a>
 
             </div>
 
