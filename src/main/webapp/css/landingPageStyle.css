@@ -50,6 +50,12 @@ h1 {
     grid-auto-rows: minmax(100px, auto);
 }
 
+#salish { 
+    width: 15%;
+    opacity: .20;
+    float: left;
+    margin: 5px;
+}
 .body-content { 
     background-color:#E7DFD8;
     position: absolute;

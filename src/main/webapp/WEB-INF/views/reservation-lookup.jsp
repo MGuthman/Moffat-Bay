@@ -42,13 +42,13 @@ Date: 09/13/2023 -->
 
 					<div class="nav-grid-item">
 
-						<a href="look-up-reservation" target="_self">FIND RESERVATION</a>
+						<a href="lookup" target="_self">FIND RESERVATION</a>
 
 					</div>
 
 					<div class="nav-grid-item">
 
-						<a href="reservation" target="_blank">MAKE RESERVATION</a>
+						<a href="reservation" target="_self">MAKE RESERVATION</a>
 
 					</div>
 

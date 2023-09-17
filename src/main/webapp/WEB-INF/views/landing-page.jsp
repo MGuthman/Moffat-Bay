@@ -41,7 +41,7 @@ Updated By: O.Tsolmon - 09/09/23 --Added target attribute in a tag (reservation)
     <div class=wrapper>
         <div class="body-content">
             <h1>MOFFAT BAY<br />LODGE</h1>
-            <p>Welcome to Moffat Bay Lodge, where a hidden gem nestled on the pristine shores of Joviedsa Island, off
+            <p><img id="salish" src="_images/SalishSalmon.png"></img>Welcome to Moffat Bay Lodge, where a hidden gem nestled on the pristine shores of Joviedsa Island, off
                 the enchanting coast of Washington state awaits you. As you embark on a journey to explore all the
                 natural beauty and serenity the Pacific Northwest has to offer, Moffat Bay Lodge invites you to
                 experience a world where rugged wilderness meets luxurious comfort. Our lodge is a haven for those
