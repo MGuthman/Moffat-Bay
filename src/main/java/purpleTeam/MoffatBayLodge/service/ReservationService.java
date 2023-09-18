@@ -37,4 +37,8 @@ public class ReservationService {
 	public void deleteReservation(Reservation reservation) {
 		reservationRepository.delete(reservation);
 	}
+
+	public Reservation lookupConfirmationById (String confirmationID) {
+		return reservationRepository.findByConfirmationID(confirmationID);
+	}
 }
