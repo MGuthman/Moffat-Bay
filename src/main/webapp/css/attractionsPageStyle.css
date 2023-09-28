@@ -86,23 +86,25 @@ header {
 
 
 footer {
-    background-color: #E7DFD8;
-    bottom: 0;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    overflow: hidden;
+	background-color: #E7DFD8;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	height: fit-content;
+	width: 100%;
+	overflow: hidden;
 }
 
 footer p {
-    font-family: 'Quasimoda';
-    font-size: 15px;
-    font-weight: 400;
-    float: left;
-    display: flex;
-    padding: 10px;
-    font-style: italic;
+	font-family: 'Quasimoda';
+	font-size: 15px;
+	font-weight: 400;
+	float: left;
+	display: flex;
+	padding: 10px;
+	font-style: italic;
 }
 
 .copyright {
