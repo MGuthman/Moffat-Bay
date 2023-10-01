@@ -22,10 +22,9 @@ Date: 09/09/2023 -->
 			style="float: right; font-size: 56px; color: #554D41"></i></a>
 	</header>
 
-	<h1>Reservation Summary</h1>
-
 	<div class="reservation-summary-container">
 		<div class="confirmation-container">
+			<h1>Reservation Summary</h1>
 			<div class="confirmation-box">
 				<p class="confirmation-number">Confirmation Number:
 					${reservation.confirmationID}</p>
