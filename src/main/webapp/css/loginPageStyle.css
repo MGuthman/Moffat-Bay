@@ -62,6 +62,7 @@ form {
 	width: 60%;
 	margin: 150px auto;
 	text-align: left;
+	box-shadow: 10px 10px rgb(85,77,65, .40);
 }
 
 label {
@@ -79,15 +80,11 @@ input[type="password"] {
 	border-radius: 3px;
 }
 
-
-.enabled-button {
-	background-color: #007bff;
-	color: #fff;
-	border: none;
-	padding: 10px 20px;
-	border-radius: 3px;
-	cursor: pointer;
-	margin-right: 10px;
+button {
+	padding: 15px 30px;
+	font-size: large;
+    margin: 10px;
+    box-shadow: 3px 3px rgb(85,77,65, .20);
 }
 
 .disabled-button {
@@ -97,7 +94,7 @@ input[type="password"] {
 }
 
 .enabled-button:hover {
-	background-color: #0056b3;
+	background-color: #ADCCCD;
 }
 
 .social-media {
