@@ -56,19 +56,19 @@ Date: 09/20/2023 -->
             <div class="Column">
                 <div class="Card">
                     <figure>
-                        <img src="_images/wine-cellar.jpg">
+                        <img src="_images/island-hike.jpg">
                         <div class="desc">
-                            <h1>Barnaby's Wine Cellar</h1><br>
-                            <p>Discover Washington State's hidden vinous gem in Barnaby's Wine Cellar. Nestled amidst lush vineyards, it's a sanctuary for oenophiles. Explore an extensive collection of local varietals and renowned labels. Our sommeliers curate exclusive tastings, offering a journey through the state's diverse terroirs. Washington's wine story awaits, one glass at a time.</p>
+                            <h1>Local Hiking Trails</h1><br>
+                            <p>Our hiking trails offer an unparalleled outdoor experience, winding through ancient forests, rugged cliffs, and panoramic vistas of the Pacific Ocean. Discover nature's secrets while breathing in the fresh island air on an unforgettable hiking expedition.</p>
                         </div>
                     </figure>
                 </div>
                 <div class="Card">
                     <figure>
-                        <img src="_images/botany-garden.jpg">
+                        <img src="_images/kayaking.jpg">
                         <div class="desc">
-                            <h1>Washington State Botany Garden</h1><br>
-                            <p>Step into a world of botanical wonder at our enchanting garden. Stroll through lush landscapes showcasing a kaleidoscope of rare and exotic flora. Immerse yourself in nature's beauty, learn about conservation, and find serenity in our tranquil oasis. Explore, connect, and be inspired by the magic of botany in our garden.</p>
+                            <h1>Kayak Rental</h1><br>
+                            <p>Our kayaking paradise offers calm, scenic routes and rugged coastlines for all skill levels. Immerse yourself in the serene beauty of the Pacific Northwest as you explore hidden coves and witness breathtaking sunsets on this unforgettable kayaking adventure.</p>
                         </div>
                     </figure>
                 </div>
@@ -76,19 +76,19 @@ Date: 09/20/2023 -->
             <div class="Column">
                 <div class="Card">
                     <figure>
-                        <img src="_images/lagoon-point.jpg">
+                        <img src="_images/scuba-diving.jpg">
                         <div class="desc">
-                            <h1>Lagoon Pointe Washington</h1><br>
-                            <p>A local town on the edge of the sea. Visit this one-of-a-kind place and meet the wonderful locals, their way of life, the beautiful scenery, and how it interacts with the sea.</p>
+                            <h1>Lagoon Pointe Washington Diving</h1><br>
+                            <p>Explore the mesmerizing depths of the Pacific Northwest at our secluded scuba diving haven off the coast of Washington State. Dive into crystal-clear waters teeming with vibrant marine life, kelp forests, and captivating shipwrecks. Immerse yourself in an underwater paradise while experiencing the unparalleled beauty of this island oasis.</p>
                         </div>
                     </figure>
                 </div>
                 <div class="Card">
                     <figure>
-                        <img src="_images/museum.jpg">
+                        <img src="_images/whale-watching.jpg">
                         <div class="desc">
-                            <h1>Field Science Museum</h1><br>
-                            <p>Discover the Envirosphere Museum, a captivating haven where science and nature entwine. Journey through immersive biodomes, witness real-time ecosystem simulations, and interact with holographic wildlife. Engage with groundbreaking climate research and delve into Earth's past. Envirosphere Museum: Where curiosity meets conservation, forging a brighter, sustainable future.</p>
+                            <h1>Whale Watching Cruise</h1><br>
+                            <p>Embark on a thrilling adventure, where majestic whales grace our waters with their presence. Join us for an unforgettable whale watching expedition, where you'll witness these gentle giants in their natural habitat, amidst the stunning backdrop of the Pacific Northwest's rugged coastline.</p>
                         </div>
                     </figure>
                 </div>
