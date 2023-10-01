@@ -105,6 +105,7 @@ h2{
     float: left;
     display: flex;
     flex-direction: row;
+	margin-bottom: 20px;
 }
 
 input[type="date"], select{
@@ -130,6 +131,7 @@ input[type="date"], select{
     padding: 2%;
     text-align: left;
     display: flex;
+	
 }
 
 .likeFigure img{
@@ -148,6 +150,7 @@ input[type="date"], select{
     float: left;
     display: flex;
     width: 50%;
+	margin-top: 20px;
 }
 
 label {
@@ -165,15 +168,12 @@ input[type="password"] {
 	border-radius: 3px;
 }
 
-
-.enabled-button {
-	background-color: #007bff;
-	color: #fff;
-	border: none;
-	padding: 10px 20px;
-	border-radius: 3px;
-	cursor: pointer;
-	margin-right: 10px;
+button {
+	padding: 15px 30px;
+	font-size: large;
+    margin: 25px;
+	margin-top: 25px;
+    box-shadow: 3px 3px rgb(85,77,65, .20);
 }
 
 .disabled-button {
@@ -183,7 +183,7 @@ input[type="password"] {
 }
 
 .enabled-button:hover {
-	background-color: #0056b3;
+	background-color: #ADCCCD;
 }
 
 .social-media {
