@@ -1,11 +1,7 @@
 <!-- Purple Team: D. Bonis, R. Duvall, M. Guthman, O.Tsolmon -->
 
 <!-- Author: O.Tsolmon
-Date: 09/09/2023 
-
-Updated By: O.Tsolmon
-Date: 10/05/2023 Removed confimationID
--->
+Date: 10/05/2023 -->
 
 <!DOCTYPE html>
 <html>
@@ -16,7 +12,7 @@ Date: 10/05/2023 Removed confimationID
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://use.typekit.net/lot0wjb.css">
 <link rel="stylesheet" type="text/css"
-	href="css/reservationSummaryStyle.css">
+	href="css/confirmationSummaryPageStyle.css">
 </head>
 <body>
 	<header>
@@ -28,39 +24,20 @@ Date: 10/05/2023 Removed confimationID
 
 	<div class="reservation-summary-container">
 		<div class="confirmation-container">
-			<h1>Reservation Summary</h1>
-			<div class="check-in-out-time">
-				<p>Check-In Time: 3:00 PM</p>
-				<p>Check-Out Time: 12:00 PM</p>
+			<h1>Your reservation is confirmed!</h1>
+			<img src="_images/lobby.png"></img>
+			<div class="confirmation-box">
+				<p class="confirmation-number">Confirmation Number:
+					${reservation.confirmationID}</p>
 			</div>
-			<div class="lodge-detail">
-				<h3>Lodge Details:</h3>
-				<ul>
-					<li>Convenient location</li>
-					<li>5-minute walk to bike rental</li>
-					<li>10-minute walk to shopping center</li>
-					<li>2 miles from the airport</li>
-					<li>Meeting and banquet rooms available</li>
-					<li>Full-service restaurant and bar on-site</li>
-				</ul>
-			</div>
-		</div>
-		<div class="reservation-details">
-			<img src="_images/lodge-img.png"></img>
-			<p>Room Size: ${reservation.roomSize}</p>
-			<p>Guests: ${reservation.numberOfGuests}</p>
-			<p>Check-In Date: ${reservation.checkInDate}</p>
-			<p>Check-Out Date: ${reservation.checkOutDate}</p>
-			<br />
-			<p class="total-price">Total Price: ${reservation.totalPrice}</p>
-			<br />
 
-			<form action="/cancel-reservation" method="get" target="_self">
-				<button type="submit">Cancel</button>
-			</form>
-			<form action="/confirmation-summary" method="get" target="_self">
-				<button type="submit">Confirm</button>
-			</form>
+			<div class="reservation-details">
+
+				<form action="/confirmation-success" method="get" target="_self">
+					<button type="submit">Back to Home</button>
+				</form>
+
+			</div>
 		</div>
 	</div>
 

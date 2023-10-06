@@ -12,6 +12,11 @@ package purpleTeam.MoffatBayLodge.controller;
  * 
  * Updated saveReservation method 
  * Created cancelReservation and confirmReservation methods
+ * 
+ * Updated By: O.Tsolmon
+ * 10/05/23
+ *  
+ * Created navigateBackToHome and updated confirmReservation methods
  */
 import java.util.Random;
 
@@ -101,9 +106,21 @@ public class ReservationFormController {
 
 	}
 
-	@GetMapping("/confirm-reservation")
-	public RedirectView confirmReservation() {
+	@GetMapping("/confirmation-success")
+	public RedirectView navigateBackToHome() {
 		return new RedirectView("/home");
+
+	}
+	
+	@GetMapping("/confirmation-summary")
+	public ModelAndView confirmReservation() {
+		
+		User user = userService.getUser(getSessionEmail());
+		Reservation reservation = reservationService.getLatestReservationByUserID(user.getUserID());
+
+		ModelAndView saveConfirmationView = new ModelAndView("confirmation-summary");
+		saveConfirmationView.addObject("reservation", reservation);
+		return saveConfirmationView;
 
 	}
 

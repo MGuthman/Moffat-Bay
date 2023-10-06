@@ -1,7 +1,7 @@
 /* Purple Team: D. Bonis, R. Duvall, M. Guthman, O.Tsolmon */
 
 /* Author: O.Tsolmon
-Date: 09/09/2023 */
+Date: 10/05/2023 */
 
 html {
 	background-color: #ADCCCD;
@@ -48,83 +48,45 @@ h1 {
 	margin-left: 3%;
 }
 
-
 .reservation-summary-container {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 	background-color: #E7DFD8;
 	padding: 100px;
-	margin: 70px;
-	margin-bottom: 250px;
-	box-shadow: 10px 10px rgb(85,77,65, .40);
 	border-radius: 15px;
+	box-shadow: 0px 0px 10px rgb(85, 77, 65, .40);
+	width: 500px;
+	margin: 0px auto;
+
 }
 
 .confirmation-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	flex: 1;
+	margin-bottom: 20px;
 }
 
-.check-in-out-time {
-	text-align: left;
-	padding: 20px;
-
+.confirmation-box {
+	margin-top: 20px;
 }
 
-.check-in-out-time p {
-	font-size: 1em;
-	margin: 10px 0;
-	color: #666;
-	font-size: x-large;
-}
-
-.lodge-detail {
-	padding: 20px;
-	text-align: left;
-	font-size: x-large;
-}
-
-.lodge-detail p {
-	font-size: 1em;
-	margin: 0;
-	color: #554D41;
-}
-
-.reservation-details {
-	flex: 1;
-	padding: 20px;
-	text-align: left;
-	background-color: #E7DFD8;
-	margin-left: 20px;
-	border: 1px solid #000;
-}
-
-.reservation-details img {
-	width: 60%;
-}
-
-.reservation-details p {
-	font-size: 1em;
-	margin: 5px 0;
-	color: #666;
-}
-
-.reservation-details {
-	font-size: x-large;
-}
-
-.reservation-details p.total-price {
+.confirmation-number {
+	font-size: inherit;
 	font-weight: bold;
+	text-align: center;
+}
+
+img {
+	width: 100%;
+	max-width: 470px;
+	height: auto;
 }
 
 button[type="submit"] {
-	float: left;
-	padding: 15px 30px;
-	font-size: large;
-	margin-right: 50px;
+	display: block;
+	margin: 0 auto;
+	padding: 0px 90px;
+	font-size: 16px;
 }
 
 .social-media {

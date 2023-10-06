@@ -1,7 +1,12 @@
 <!-- Purple Team: D. Bonis, R. Duvall, M. Guthman, O.Tsolmon -->
 
 <!-- Author: M.Guthman
-Date: 09/13/2023 -->
+Date: 09/13/2023 
+
+Updated By: O.Tsolmon
+Date: 10/05/2023 Updated image
+
+-->
 
 <!DOCTYPE html>
 <html>
@@ -85,7 +90,7 @@ Date: 09/13/2023 -->
 				</div>
 				<div class="reservation-details">
 					<div class="reservation-img">
-						<img src="_images/lookup-image.jpg"></img>
+						<img src="_images/reservation-img.png"></img>
 					</div>
 					<div class="reservation-text">
 						<table>
